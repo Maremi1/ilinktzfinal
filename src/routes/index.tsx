@@ -235,6 +235,61 @@ function Index() {
         </div>
       </section>
 
+      {/* CULTURE / TEAM */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+            <div className="relative rounded-3xl overflow-hidden glass-strong p-2 group">
+              <div className="relative overflow-hidden rounded-2xl">
+                <img
+                  src={teamMeeting}
+                  alt="The iLink Tanzania team collaborating"
+                  className="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700"
+                  width={1600}
+                  height={1200}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              </div>
+              <div className="absolute bottom-6 left-6 right-6 glass-strong rounded-2xl p-4 flex items-center justify-between">
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-primary">Our People</div>
+                  <div className="font-display font-semibold text-lg">Trained · Trusted · Tireless</div>
+                </div>
+                <div className="text-3xl">◉</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-center">
+              <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Culture</div>
+              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+                A team built for <span className="text-gradient">excellence</span>.
+              </h2>
+              <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+                Every iLink employee is selected, trained and supported to deliver
+                with discipline. We believe people are the bridge between strategy
+                and result.
+              </p>
+              <div className="mt-8 space-y-3">
+                {[
+                  { k: "Confidentiality", v: "Built into every workflow and contract." },
+                  { k: "Continuous training", v: "We invest deeply in our personnel." },
+                  { k: "Local pride", v: "Tanzanian roots, world-class delivery." },
+                ].map((x) => (
+                  <div key={x.k} className="glass rounded-xl p-4 flex items-start gap-4">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold text-sm shrink-0">✓</div>
+                    <div>
+                      <div className="font-semibold">{x.k}</div>
+                      <div className="text-sm text-muted-foreground">{x.v}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4">
