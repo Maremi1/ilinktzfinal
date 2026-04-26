@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import cityBg from "@/assets/city-bg.jpg";
+import teamMeeting from "@/assets/team-meeting.jpg";
+import abstractCube from "@/assets/abstract-cube.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -31,6 +33,39 @@ function AboutPage() {
             value-added technological services and devices that integrate
             seamlessly into existing workflows.
           </p>
+        </div>
+      </section>
+
+      {/* Image strip */}
+      <section className="py-10">
+        <div className="container mx-auto px-4 grid md:grid-cols-3 gap-4">
+          <div className="md:col-span-2 relative rounded-3xl overflow-hidden glass-strong p-2 group">
+            <img
+              src={teamMeeting}
+              alt="iLink Tanzania team in a glass-walled office"
+              className="w-full h-full object-cover aspect-[16/10] rounded-2xl group-hover:scale-105 transition-transform duration-700"
+              width={1600}
+              height={1000}
+              loading="lazy"
+            />
+          </div>
+          <div className="relative rounded-3xl overflow-hidden glass-strong p-2">
+            <div className="relative rounded-2xl overflow-hidden aspect-[16/10]">
+              <img
+                src={abstractCube}
+                alt="Abstract data cube"
+                className="w-full h-full object-cover animate-ken-burns"
+                width={1024}
+                height={1024}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="text-xs uppercase tracking-[0.2em] text-primary">Engineered</div>
+                <div className="font-display font-bold text-lg">Bespoke systems</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

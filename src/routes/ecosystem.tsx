@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import pillarFinance from "@/assets/pillar-finance.jpg";
+import pillarResources from "@/assets/pillar-resources.jpg";
+import pillarTrade from "@/assets/pillar-trade.jpg";
+import pillarLifestyle from "@/assets/pillar-lifestyle.jpg";
 
 export const Route = createFileRoute("/ecosystem")({
   head: () => ({
@@ -14,7 +18,7 @@ export const Route = createFileRoute("/ecosystem")({
 });
 
 type Brand = { name: string; tag: string };
-type Pillar = { id: string; title: string; subtitle: string; accent: string; brands: Brand[] };
+type Pillar = { id: string; title: string; subtitle: string; accent: string; image: string; brands: Brand[] };
 
 const pillars: Pillar[] = [
   {
@@ -22,6 +26,7 @@ const pillars: Pillar[] = [
     title: "Finance & Technology",
     subtitle: "Pillar I",
     accent: "from-primary/40 to-accent/30",
+    image: pillarFinance,
     brands: [
       { name: "iBank", tag: "Banking & Forex Bureau — smart cards, biometric devices, mobile money, SMS gateways." },
       { name: "iFinance", tag: "Microfinance systems for small groups, biometric field tools and managed investment funds." },
@@ -34,6 +39,7 @@ const pillars: Pillar[] = [
     title: "Resources & Infrastructure",
     subtitle: "Pillar II",
     accent: "from-accent/40 to-secondary/40",
+    image: pillarResources,
     brands: [
       { name: "iMine", tag: "End-to-end mineral activities — gemstone cutting, domestic sales, certified international marketing." },
       { name: "iGrow", tag: "Agriculture & horticulture — production, processing, domestic and international marketing." },
@@ -46,6 +52,7 @@ const pillars: Pillar[] = [
     title: "Trade, Retail & Logistics",
     subtitle: "Pillar III",
     accent: "from-secondary/40 to-primary/40",
+    image: pillarTrade,
     brands: [
       { name: "Alma Beauty", tag: "Cosmetics, Alma clothing line, interior décor and reproductive health products." },
       { name: "Mama Mia's Soko", tag: "E-commerce hub — manufacturer-to-consumer with tiered membership and physical stores." },
@@ -58,6 +65,7 @@ const pillars: Pillar[] = [
     title: "Professional Services & Lifestyle",
     subtitle: "Pillar IV",
     accent: "from-primary/30 to-secondary/30",
+    image: pillarLifestyle,
     brands: [
       { name: "AtomicStar", tag: "PR, HR, employment agency, project management, feasibility studies and iLink media." },
       { name: "myEstate", tag: "Real estate development, property agency, interior design and finance portfolios." },
@@ -105,6 +113,25 @@ function EcosystemPage() {
                 <div className="mt-0.5">{p.title}</div>
               </button>
             ))}
+          </div>
+
+          {/* Pillar hero image */}
+          <div key={current.id} className="mt-8 relative rounded-3xl overflow-hidden glass-strong p-2 animate-slide-up">
+            <div className="relative rounded-2xl overflow-hidden aspect-[21/9]">
+              <img
+                src={current.image}
+                alt={current.title}
+                className="w-full h-full object-cover animate-ken-burns"
+                width={1024}
+                height={1024}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/30 to-transparent" />
+              <div className="absolute left-8 bottom-8 right-8 max-w-md">
+                <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2">{current.subtitle}</div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold">{current.title}</h3>
+              </div>
+            </div>
           </div>
 
           <div className="mt-8 grid md:grid-cols-2 gap-5">

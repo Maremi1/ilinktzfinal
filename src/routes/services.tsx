@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import abstractCube from "@/assets/abstract-cube.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -35,17 +36,32 @@ function ServicesPage() {
   return (
     <div>
       <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">What we do</div>
-          <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight">
-            End-to-end <span className="text-gradient">solutions</span><br />
-            engineered for impact.
-          </h1>
-          <p className="mt-6 text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Every service is built to integrate seamlessly with your existing
-            workflows — backed by trained personnel, deep technological alliances
-            and uncompromising confidentiality.
-          </p>
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-5 gap-10 items-center max-w-6xl mx-auto">
+            <div className="lg:col-span-3">
+              <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">What we do</div>
+              <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight">
+                End-to-end <span className="text-gradient">solutions</span><br />
+                engineered for impact.
+              </h1>
+              <p className="mt-6 text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                Every service is built to integrate seamlessly with your existing
+                workflows — backed by trained personnel, deep technological alliances
+                and uncompromising confidentiality.
+              </p>
+            </div>
+            <div className="lg:col-span-2 relative hidden lg:block">
+              <div className="absolute inset-0 bg-primary/30 blur-[100px] rounded-full" />
+              <img
+                src={abstractCube}
+                alt="Abstract systems cube"
+                className="relative animate-float rounded-3xl"
+                width={1024}
+                height={1024}
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

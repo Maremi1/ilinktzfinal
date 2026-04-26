@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import networkOrb from "@/assets/network-orb.jpg";
+import worldMap from "@/assets/world-map.jpg";
+import teamMeeting from "@/assets/team-meeting.jpg";
+import cityBg from "@/assets/city-bg.jpg";
+import abstractCube from "@/assets/abstract-cube.jpg";
+import { BrandMarquee } from "@/components/BrandMarquee";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,7 +37,7 @@ function Index() {
       {/* HERO */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" width={1920} height={1080} />
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40 animate-ken-burns" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         </div>
 
@@ -91,6 +96,16 @@ function Index() {
         </div>
       </section>
 
+      {/* BRAND MARQUEE */}
+      <section className="py-10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-6 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            A portfolio of sixteen brands
+          </div>
+          <BrandMarquee />
+        </div>
+      </section>
+
       {/* VISION / MISSION */}
       <section className="py-24">
         <div className="container mx-auto px-4">
@@ -134,6 +149,55 @@ function Index() {
         </div>
       </section>
 
+      {/* GLOBAL PRESENCE */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-5 gap-10 items-center">
+            <div className="lg:col-span-2">
+              <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">Global to Local</div>
+              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+                Rooted in Tanzania.<br />
+                <span className="text-gradient">Connected to the world.</span>
+              </h2>
+              <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+                From Dar es Salaam, our ecosystem reaches across borders — moving
+                minerals, capital, ideas and goods through trusted international
+                partnerships.
+              </p>
+              <div className="mt-8 grid grid-cols-3 gap-3">
+                {[
+                  { v: "3", l: "Continents" },
+                  { v: "16", l: "Brands" },
+                  { v: "24/7", l: "Operations" },
+                ].map((s) => (
+                  <div key={s.l} className="glass-card rounded-2xl p-4 text-center">
+                    <div className="font-display text-2xl font-bold text-gradient">{s.v}</div>
+                    <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">{s.l}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="lg:col-span-3 relative">
+              <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full" />
+              <div className="relative glass-strong rounded-3xl p-4 overflow-hidden">
+                <img
+                  src={worldMap}
+                  alt="Global network reach"
+                  className="w-full rounded-2xl"
+                  width={1600}
+                  height={900}
+                  loading="lazy"
+                />
+                <div className="absolute top-8 left-8 glass rounded-xl px-3 py-2 text-xs">
+                  <div className="text-muted-foreground">HQ</div>
+                  <div className="font-semibold">Dar es Salaam</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* GROUP STRUCTURE */}
       <section className="py-24">
         <div className="container mx-auto px-4">
@@ -166,6 +230,61 @@ function Index() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CULTURE / TEAM */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+            <div className="relative rounded-3xl overflow-hidden glass-strong p-2 group">
+              <div className="relative overflow-hidden rounded-2xl">
+                <img
+                  src={teamMeeting}
+                  alt="The iLink Tanzania team collaborating"
+                  className="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700"
+                  width={1600}
+                  height={1200}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              </div>
+              <div className="absolute bottom-6 left-6 right-6 glass-strong rounded-2xl p-4 flex items-center justify-between">
+                <div>
+                  <div className="text-xs uppercase tracking-wider text-primary">Our People</div>
+                  <div className="font-display font-semibold text-lg">Trained · Trusted · Tireless</div>
+                </div>
+                <div className="text-3xl">◉</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-center">
+              <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Culture</div>
+              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+                A team built for <span className="text-gradient">excellence</span>.
+              </h2>
+              <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+                Every iLink employee is selected, trained and supported to deliver
+                with discipline. We believe people are the bridge between strategy
+                and result.
+              </p>
+              <div className="mt-8 space-y-3">
+                {[
+                  { k: "Confidentiality", v: "Built into every workflow and contract." },
+                  { k: "Continuous training", v: "We invest deeply in our personnel." },
+                  { k: "Local pride", v: "Tanzanian roots, world-class delivery." },
+                ].map((x) => (
+                  <div key={x.k} className="glass rounded-xl p-4 flex items-start gap-4">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold text-sm shrink-0">✓</div>
+                    <div>
+                      <div className="font-semibold">{x.k}</div>
+                      <div className="text-sm text-muted-foreground">{x.v}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
