@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import cityBg from "@/assets/city-bg.jpg";
+import teamMeeting from "@/assets/team-meeting.jpg";
+import abstractCube from "@/assets/abstract-cube.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
