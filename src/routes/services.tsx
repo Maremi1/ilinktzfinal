@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import abstractCube from "@/assets/abstract-cube.jpg";
-import networkOrb from "@/assets/network-orb.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
