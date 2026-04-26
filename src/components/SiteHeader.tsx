@@ -65,7 +65,8 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold text-sm hover:shadow-[var(--shadow-glow)] transition-all duration-300 hover:scale-105"
@@ -75,15 +76,18 @@ export function SiteHeader() {
             </Link>
           </div>
 
-          <button
-            className="md:hidden glass rounded-lg p-2"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
-          >
-            <div className="w-5 h-0.5 bg-foreground mb-1" />
-            <div className="w-5 h-0.5 bg-foreground mb-1" />
-            <div className="w-5 h-0.5 bg-foreground" />
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              className="glass rounded-lg p-2"
+              onClick={() => setOpen(!open)}
+              aria-label="Toggle menu"
+            >
+              <div className="w-5 h-0.5 bg-foreground mb-1" />
+              <div className="w-5 h-0.5 bg-foreground mb-1" />
+              <div className="w-5 h-0.5 bg-foreground" />
+            </button>
+          </div>
         </div>
 
         {open && (
