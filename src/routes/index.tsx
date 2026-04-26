@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import networkOrb from "@/assets/network-orb.jpg";
+import worldMap from "@/assets/world-map.jpg";
+import teamMeeting from "@/assets/team-meeting.jpg";
+import cityBg from "@/assets/city-bg.jpg";
+import abstractCube from "@/assets/abstract-cube.jpg";
+import { BrandMarquee } from "@/components/BrandMarquee";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,7 +37,7 @@ function Index() {
       {/* HERO */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" width={1920} height={1080} />
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40 animate-ken-burns" width={1920} height={1080} />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         </div>
 
