@@ -96,6 +96,16 @@ function Index() {
         </div>
       </section>
 
+      {/* BRAND MARQUEE */}
+      <section className="py-10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-6 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+            A portfolio of sixteen brands
+          </div>
+          <BrandMarquee />
+        </div>
+      </section>
+
       {/* VISION / MISSION */}
       <section className="py-24">
         <div className="container mx-auto px-4">
@@ -135,6 +145,55 @@ function Index() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GLOBAL PRESENCE */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-5 gap-10 items-center">
+            <div className="lg:col-span-2">
+              <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">Global to Local</div>
+              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+                Rooted in Tanzania.<br />
+                <span className="text-gradient">Connected to the world.</span>
+              </h2>
+              <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+                From Dar es Salaam, our ecosystem reaches across borders — moving
+                minerals, capital, ideas and goods through trusted international
+                partnerships.
+              </p>
+              <div className="mt-8 grid grid-cols-3 gap-3">
+                {[
+                  { v: "3", l: "Continents" },
+                  { v: "16", l: "Brands" },
+                  { v: "24/7", l: "Operations" },
+                ].map((s) => (
+                  <div key={s.l} className="glass-card rounded-2xl p-4 text-center">
+                    <div className="font-display text-2xl font-bold text-gradient">{s.v}</div>
+                    <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">{s.l}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="lg:col-span-3 relative">
+              <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full" />
+              <div className="relative glass-strong rounded-3xl p-4 overflow-hidden">
+                <img
+                  src={worldMap}
+                  alt="Global network reach"
+                  className="w-full rounded-2xl"
+                  width={1600}
+                  height={900}
+                  loading="lazy"
+                />
+                <div className="absolute top-8 left-8 glass rounded-xl px-3 py-2 text-xs">
+                  <div className="text-muted-foreground">HQ</div>
+                  <div className="font-semibold">Dar es Salaam</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
