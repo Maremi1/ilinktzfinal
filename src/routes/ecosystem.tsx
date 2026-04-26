@@ -115,6 +115,25 @@ function EcosystemPage() {
             ))}
           </div>
 
+          {/* Pillar hero image */}
+          <div key={current.id} className="mt-8 relative rounded-3xl overflow-hidden glass-strong p-2 animate-slide-up">
+            <div className="relative rounded-2xl overflow-hidden aspect-[21/9]">
+              <img
+                src={current.image}
+                alt={current.title}
+                className="w-full h-full object-cover animate-ken-burns"
+                width={1024}
+                height={1024}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/30 to-transparent" />
+              <div className="absolute left-8 bottom-8 right-8 max-w-md">
+                <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2">{current.subtitle}</div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold">{current.title}</h3>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-8 grid md:grid-cols-2 gap-5">
             {current.brands.map((b, i) => (
               <div
