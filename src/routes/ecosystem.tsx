@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import pillarFinance from "@/assets/pillar-finance.jpg";
+import pillarResources from "@/assets/pillar-resources.jpg";
+import pillarTrade from "@/assets/pillar-trade.jpg";
+import pillarLifestyle from "@/assets/pillar-lifestyle.jpg";
 
 export const Route = createFileRoute("/ecosystem")({
   head: () => ({
