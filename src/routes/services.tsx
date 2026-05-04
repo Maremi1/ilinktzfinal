@@ -1,5 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import abstractCube from "@/assets/abstract-cube.jpg";
+import svcIct from "@/assets/svc-ict.jpg";
+import svcFinance from "@/assets/svc-finance.jpg";
+import svcData from "@/assets/svc-data.jpg";
+import svcResources from "@/assets/svc-resources.jpg";
+import svcTrade from "@/assets/svc-trade.jpg";
+import svcLogistics from "@/assets/svc-logistics.jpg";
+import svcRealestate from "@/assets/svc-realestate.jpg";
+import svcTourism from "@/assets/svc-tourism.jpg";
+import svcConsultation from "@/assets/svc-consultation.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -14,15 +23,15 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { icon: "⌬", title: "ICT & Telecommunications", body: "Premier IT consultation, ISP solutions, infrastructure design and managed services across enterprise environments." },
-  { icon: "◈", title: "Financial Systems", body: "Banking & forex platforms, smart card issuance, biometric authentication, microfinance systems and managed investment funds." },
-  { icon: "◊", title: "Data Intelligence", body: "Targeted demographic database collection and management powering precision marketing campaigns." },
-  { icon: "△", title: "Resources & Supply", body: "Mineral marketing, agricultural lifecycle management, petroleum services and reliable energy supply networks." },
-  { icon: "◇", title: "Trade & E-commerce", body: "Direct manufacturer-to-consumer distribution, importation, retail networks and tiered membership platforms." },
-  { icon: "◯", title: "Logistics & Delivery", body: "Coordinated rapid pickup and last-mile delivery with specialized riders for vendor-to-customer execution." },
-  { icon: "▣", title: "Real Estate & Facilities", body: "Property development, agency, interior design, facility management, cleaning, laundry and relocation." },
-  { icon: "✦", title: "Tourism & Hospitality", body: "Hotels, museums, recreational centers and integrated land, water and air transport solutions." },
-  { icon: "⬢", title: "Consultation Marketplace", body: "Online consultation platform enabling seamless voice and video sessions between experts and clients." },
+  { icon: "⌬", image: svcIct, title: "ICT & Telecommunications", body: "Premier IT consultation, ISP solutions, infrastructure design and managed services across enterprise environments." },
+  { icon: "◈", image: svcFinance, title: "Financial Systems", body: "Banking & forex platforms, smart card issuance, biometric authentication, microfinance systems and managed investment funds." },
+  { icon: "◊", image: svcData, title: "Data Intelligence", body: "Targeted demographic database collection and management powering precision marketing campaigns." },
+  { icon: "△", image: svcResources, title: "Resources & Supply", body: "Mineral marketing, agricultural lifecycle management, petroleum services and reliable energy supply networks." },
+  { icon: "◇", image: svcTrade, title: "Trade & E-commerce", body: "Direct manufacturer-to-consumer distribution, importation, retail networks and tiered membership platforms." },
+  { icon: "◯", image: svcLogistics, title: "Logistics & Delivery", body: "Coordinated rapid pickup and last-mile delivery with specialized riders for vendor-to-customer execution." },
+  { icon: "▣", image: svcRealestate, title: "Real Estate & Facilities", body: "Property development, agency, interior design, facility management, cleaning, laundry and relocation." },
+  { icon: "✦", image: svcTourism, title: "Tourism & Hospitality", body: "Hotels, museums, recreational centers and integrated land, water and air transport solutions." },
+  { icon: "⬢", image: svcConsultation, title: "Consultation Marketplace", body: "Online consultation platform enabling seamless voice and video sessions between experts and clients." },
 ];
 
 const process = [
@@ -71,14 +80,27 @@ function ServicesPage() {
             {services.map((s, i) => (
               <div
                 key={s.title}
-                className="glass-card rounded-3xl p-7 group animate-slide-up"
+                className="glass-card rounded-3xl overflow-hidden group animate-slide-up flex flex-col"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center text-2xl text-primary mb-5 group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                  {s.icon}
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    width={1024}
+                    height={768}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+                  <div className="absolute top-4 left-4 w-11 h-11 rounded-xl glass-strong flex items-center justify-center text-xl text-primary group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                    {s.icon}
+                  </div>
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+                <div className="p-7 pt-5">
+                  <h3 className="font-display text-xl font-semibold mb-2">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+                </div>
               </div>
             ))}
           </div>
