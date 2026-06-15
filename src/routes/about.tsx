@@ -132,7 +132,7 @@ function AboutPage() {
             <div className="relative rounded-2xl overflow-hidden aspect-[21/9]">
               <img
                 src={aboutGovernance}
-                alt="Corporate boardroom overlooking city skyline"
+                alt="African executives in a corporate boardroom overlooking the city"
                 className="w-full h-full object-cover animate-ken-burns"
                 width={1024}
                 height={768}
