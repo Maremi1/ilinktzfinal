@@ -46,7 +46,7 @@ function AboutPage() {
           <div className="md:col-span-2 relative rounded-3xl overflow-hidden glass-strong p-2 group">
             <img
               src={teamMeeting}
-              alt="iLink Tanzania team in a glass-walled office"
+              alt="African business team collaborating in a modern office"
               className="w-full h-full object-cover aspect-[16/10] rounded-2xl group-hover:scale-105 transition-transform duration-700"
               width={1600}
               height={1000}
@@ -80,7 +80,7 @@ function AboutPage() {
             <div className="relative h-56 overflow-hidden">
               <img
                 src={aboutTech}
-                alt="Futuristic tech workspace with holographic displays"
+                alt="African tech professionals in a futuristic innovation lab"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 width={1024}
                 height={768}
@@ -132,7 +132,7 @@ function AboutPage() {
             <div className="relative rounded-2xl overflow-hidden aspect-[21/9]">
               <img
                 src={aboutGovernance}
-                alt="Corporate boardroom overlooking city skyline"
+                alt="African executives in a corporate boardroom overlooking the city"
                 className="w-full h-full object-cover animate-ken-burns"
                 width={1024}
                 height={768}
@@ -180,7 +180,7 @@ function AboutPage() {
               <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <img
                   src={aboutCollab}
-                  alt="Diverse professionals collaborating in a modern office"
+                  alt="Diverse African professionals collaborating in a modern workspace"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   width={1024}
                   height={768}
