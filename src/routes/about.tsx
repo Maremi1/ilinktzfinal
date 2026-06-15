@@ -2,6 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import cityBg from "@/assets/city-bg.jpg";
 import teamMeeting from "@/assets/team-meeting.jpg";
 import abstractCube from "@/assets/abstract-cube.jpg";
+import aboutTech from "@/assets/about-tech.jpg";
+import aboutBrands from "@/assets/about-brands.jpg";
+import aboutGovernance from "@/assets/about-governance.jpg";
+import aboutCollab from "@/assets/about-collab.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -69,37 +73,81 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Promise & Standard with media */}
       <section className="py-16">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-6">
-          <div className="glass-card rounded-3xl p-10">
-            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Promise</div>
-            <h2 className="font-display text-3xl font-bold mb-4">Bridging businesses to customized solutions</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              We engineer bespoke ICT and marketing solutions — not generic
-              templates. Every system is shaped around the institution it serves,
-              from biometric field tools to integrated SMS gateways and
-              demographic intelligence.
-            </p>
+          <div className="glass-card rounded-3xl overflow-hidden">
+            <div className="relative h-56 overflow-hidden">
+              <img
+                src={aboutTech}
+                alt="Futuristic tech workspace with holographic displays"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                width={1024}
+                height={768}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+            </div>
+            <div className="p-10 -mt-8 relative">
+              <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Promise</div>
+              <h2 className="font-display text-3xl font-bold mb-4">Bridging businesses to customized solutions</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                We engineer bespoke ICT and marketing solutions — not generic
+                templates. Every system is shaped around the institution it serves,
+                from biometric field tools to integrated SMS gateways and
+                demographic intelligence.
+              </p>
+            </div>
           </div>
 
-          <div className="glass-card rounded-3xl p-10">
-            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Standard</div>
-            <h2 className="font-display text-3xl font-bold mb-4">Sixteen brands. One discipline.</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Across finance, infrastructure, trade and lifestyle, every iLink
-              brand operates by a single standard of excellence — disciplined
-              execution, rapid response and uncompromising confidentiality.
-            </p>
+          <div className="glass-card rounded-3xl overflow-hidden">
+            <div className="relative h-56 overflow-hidden">
+              <img
+                src={aboutBrands}
+                alt="Abstract network of interconnected brands"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                width={1024}
+                height={768}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+            </div>
+            <div className="p-10 -mt-8 relative">
+              <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Standard</div>
+              <h2 className="font-display text-3xl font-bold mb-4">Sixteen brands. One discipline.</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Across finance, infrastructure, trade and lifestyle, every iLink
+                brand operates by a single standard of excellence — disciplined
+                execution, rapid response and uncompromising confidentiality.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Governance section with media */}
       <section className="py-16">
         <div className="container mx-auto px-4">
+          <div className="relative rounded-3xl overflow-hidden mb-10 glass-strong p-2">
+            <div className="relative rounded-2xl overflow-hidden aspect-[21/9]">
+              <img
+                src={aboutGovernance}
+                alt="Corporate boardroom overlooking city skyline"
+                className="w-full h-full object-cover animate-ken-burns"
+                width={1024}
+                height={768}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
+              <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 max-w-lg">
+                <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2">Governance</div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold">Streamlined for an agile conglomerate</h2>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">Governance</div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold">Streamlined for an agile conglomerate</h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="text-muted-foreground">
               Local execution spearheaded by Managing Director Dorice Emmanuel
               Malle, supported by robust international corporate oversight.
             </p>
@@ -124,20 +172,41 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Tier section with side media */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { tier: "Tier I", aud: "Corporates", body: "Finance & Tech, Resources & Infrastructure, Trade & Logistics, Professional Services & Lifestyle." },
-              { tier: "Tier II", aud: "Small Businesses", body: "Tailored ICT, supply, retail and logistics support for SMEs across all sectors." },
-              { tier: "Tier III", aud: "Home & Individuals", body: "Direct-to-consumer trade, delivery, lifestyle and consultation services." },
-            ].map((t) => (
-              <div key={t.tier} className="glass-card rounded-3xl p-8">
-                <div className="text-xs uppercase tracking-[0.25em] text-primary">{t.tier}</div>
-                <div className="font-display text-2xl font-bold mt-2">{t.aud}</div>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{t.body}</p>
+          <div className="grid lg:grid-cols-5 gap-6 items-start">
+            <div className="lg:col-span-2 relative rounded-3xl overflow-hidden glass-strong p-2 sticky top-24">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
+                <img
+                  src={aboutCollab}
+                  alt="Diverse professionals collaborating in a modern office"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  width={1024}
+                  height={768}
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="text-xs uppercase tracking-[0.2em] text-primary mb-1">Our Reach</div>
+                  <div className="font-display font-bold text-xl">Serving every tier of the economy</div>
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div className="lg:col-span-3 grid gap-6">
+              {[
+                { tier: "Tier I", aud: "Corporates", body: "Finance & Tech, Resources & Infrastructure, Trade & Logistics, Professional Services & Lifestyle." },
+                { tier: "Tier II", aud: "Small Businesses", body: "Tailored ICT, supply, retail and logistics support for SMEs across all sectors." },
+                { tier: "Tier III", aud: "Home & Individuals", body: "Direct-to-consumer trade, delivery, lifestyle and consultation services." },
+              ].map((t) => (
+                <div key={t.tier} className="glass-card rounded-3xl p-8">
+                  <div className="text-xs uppercase tracking-[0.25em] text-primary">{t.tier}</div>
+                  <div className="font-display text-2xl font-bold mt-2">{t.aud}</div>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{t.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
