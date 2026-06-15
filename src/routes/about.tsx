@@ -46,7 +46,7 @@ function AboutPage() {
           <div className="md:col-span-2 relative rounded-3xl overflow-hidden glass-strong p-2 group">
             <img
               src={teamMeeting}
-              alt="iLink Tanzania team in a glass-walled office"
+              alt="African business team collaborating in a modern office"
               className="w-full h-full object-cover aspect-[16/10] rounded-2xl group-hover:scale-105 transition-transform duration-700"
               width={1600}
               height={1000}
