@@ -10,12 +10,6 @@ export function SiteFooter() {
             <div className="md:col-span-2">
               <Link to="/" className="flex items-center gap-3">
                 <img src={logo} alt="iLink" className="h-12 w-12 rounded-xl bg-white/95 p-1 object-contain" />
-                <div>
-                  <div className="font-display font-bold text-xl">iLink Tanzania</div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                    Bridging ideas with reality
-                  </div>
-                </div>
               </Link>
               <p className="mt-6 text-muted-foreground max-w-md leading-relaxed">
                 A multi-sector conglomerate engineering bespoke ICT and marketing

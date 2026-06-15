@@ -43,12 +43,6 @@ export function SiteHeader() {
                 className="relative h-10 w-10 rounded-xl object-contain bg-white/95 p-1"
               />
             </div>
-            <div className="leading-tight">
-              <div className="font-display font-bold text-lg tracking-tight">iLink</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                Tanzania
-              </div>
-            </div>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
