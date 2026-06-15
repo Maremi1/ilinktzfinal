@@ -180,7 +180,7 @@ function AboutPage() {
               <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <img
                   src={aboutCollab}
-                  alt="Diverse professionals collaborating in a modern office"
+                  alt="Diverse African professionals collaborating in a modern workspace"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   width={1024}
                   height={768}
