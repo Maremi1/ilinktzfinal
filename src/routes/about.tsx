@@ -80,7 +80,7 @@ function AboutPage() {
             <div className="relative h-56 overflow-hidden">
               <img
                 src={aboutTech}
-                alt="Futuristic tech workspace with holographic displays"
+                alt="African tech professionals in a futuristic innovation lab"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 width={1024}
                 height={768}
