@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/ilink-logo.jpeg";
+import logoAsset from "@/assets/ilinktanzanialogo.png.asset.json";
 
 export function SiteFooter() {
   return (
@@ -9,7 +9,7 @@ export function SiteFooter() {
           <div className="grid md:grid-cols-4 gap-10">
             <div className="md:col-span-2">
               <Link to="/" className="flex items-center gap-3">
-                <img src={logo} alt="iLink" className="h-12 w-12 rounded-xl bg-white/95 p-1 object-contain" />
+                <img src={logoAsset.url} alt="iLink" className="h-12 w-auto rounded-xl object-contain" />
               </Link>
               <p className="mt-6 text-muted-foreground max-w-md leading-relaxed">
                 A multi-sector conglomerate engineering bespoke ICT and marketing

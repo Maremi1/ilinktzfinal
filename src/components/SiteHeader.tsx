@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/ilink-logo.jpeg";
+import logoAsset from "@/assets/ilinktanzanialogo.png.asset.json";
 import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
@@ -38,9 +38,9 @@ export function SiteHeader() {
             <div className="relative">
               <div className="absolute inset-0 rounded-xl bg-primary/30 blur-lg group-hover:blur-xl transition-all" />
               <img
-                src={logo}
+                src={logoAsset.url}
                 alt="iLink Tanzania"
-                className="relative h-10 w-10 rounded-xl object-contain bg-white/95 p-1"
+                className="relative h-10 w-auto rounded-xl object-contain"
               />
             </div>
           </Link>
