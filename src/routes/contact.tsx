@@ -15,6 +15,38 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    interest: "Finance & Technology",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = [
+      `*New Inquiry from iLink Website*`,
+      ``,
+      `*Name:* ${form.name}`,
+      `*Company:* ${form.company || "N/A"}`,
+      `*Email:* ${form.email}`,
+      `*Phone:* ${form.phone || "N/A"}`,
+      `*Interest:* ${form.interest}`,
+      ``,
+      `*Message:*`,
+      form.message,
+    ].join("%0A");
+    window.open(`https://wa.me/255765658595?text=${text}`, "_blank");
+    setSent(true);
+  };
 
   return (
     <div>
