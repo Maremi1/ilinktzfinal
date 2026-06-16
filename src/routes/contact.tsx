@@ -143,7 +143,7 @@ function ContactPage() {
   );
 }
 
-function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {
+function Field({ label, name, type = "text", required, value, onChange }: { label: string; name: string; type?: string; required?: boolean; value?: string; onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }) {
   return (
     <div>
       <label htmlFor={name} className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">
@@ -154,6 +154,8 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
         name={name}
         type={type}
         required={required}
+        value={value}
+        onChange={onChange}
         className="w-full glass rounded-xl px-4 py-3 bg-background/40 outline-none focus:border-primary transition"
       />
     </div>
