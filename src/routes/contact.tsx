@@ -75,26 +75,20 @@ function ContactPage() {
                   <p className="mt-3 text-muted-foreground">Thank you — our team will reply within one business day.</p>
                 </div>
               ) : (
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSent(true);
-                  }}
-                  className="space-y-5"
-                >
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid md:grid-cols-2 gap-5">
-                    <Field label="Full name" name="name" required />
-                    <Field label="Company" name="company" />
+                    <Field label="Full name" name="name" required value={form.name} onChange={handleChange} />
+                    <Field label="Company" name="company" value={form.company} onChange={handleChange} />
                   </div>
                   <div className="grid md:grid-cols-2 gap-5">
-                    <Field label="Email" name="email" type="email" required />
-                    <Field label="Phone" name="phone" type="tel" />
+                    <Field label="Email" name="email" type="email" required value={form.email} onChange={handleChange} />
+                    <Field label="Phone" name="phone" type="tel" value={form.phone} onChange={handleChange} />
                   </div>
                   <div>
                     <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">
                       Area of interest
                     </label>
-                    <select className="w-full glass rounded-xl px-4 py-3 bg-background/40 outline-none focus:border-primary transition">
+                    <select name="interest" value={form.interest} onChange={handleChange} className="w-full glass rounded-xl px-4 py-3 bg-background/40 outline-none focus:border-primary transition">
                       <option className="bg-background">Finance & Technology</option>
                       <option className="bg-background">Resources & Infrastructure</option>
                       <option className="bg-background">Trade, Retail & Logistics</option>
@@ -107,8 +101,11 @@ function ContactPage() {
                       Tell us about your project
                     </label>
                     <textarea
+                      name="message"
                       rows={5}
                       required
+                      value={form.message}
+                      onChange={handleChange}
                       className="w-full glass rounded-xl px-4 py-3 bg-background/40 outline-none focus:border-primary transition resize-none"
                       placeholder="A few sentences about what you're trying to build, fix or scale..."
                     />
