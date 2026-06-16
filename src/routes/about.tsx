@@ -180,10 +180,10 @@ function AboutPage() {
               <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <img
                   src={aboutCollab}
-                  alt="Diverse African professionals collaborating in a modern workspace"
+                  alt="African entrepreneurs collaborating on a rooftop terrace with city skyline views"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  width={1024}
-                  height={768}
+                  width={768}
+                  height={1024}
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
