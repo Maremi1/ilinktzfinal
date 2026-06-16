@@ -15,6 +15,38 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    interest: "Finance & Technology",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = [
+      `*New Inquiry from iLink Website*`,
+      ``,
+      `*Name:* ${form.name}`,
+      `*Company:* ${form.company || "N/A"}`,
+      `*Email:* ${form.email}`,
+      `*Phone:* ${form.phone || "N/A"}`,
+      `*Interest:* ${form.interest}`,
+      ``,
+      `*Message:*`,
+      form.message,
+    ].join("%0A");
+    window.open(`https://wa.me/255765658595?text=${text}`, "_blank");
+    setSent(true);
+  };
 
   return (
     <div>
@@ -43,26 +75,20 @@ function ContactPage() {
                   <p className="mt-3 text-muted-foreground">Thank you — our team will reply within one business day.</p>
                 </div>
               ) : (
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSent(true);
-                  }}
-                  className="space-y-5"
-                >
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid md:grid-cols-2 gap-5">
-                    <Field label="Full name" name="name" required />
-                    <Field label="Company" name="company" />
+                    <Field label="Full name" name="name" required value={form.name} onChange={handleChange} />
+                    <Field label="Company" name="company" value={form.company} onChange={handleChange} />
                   </div>
                   <div className="grid md:grid-cols-2 gap-5">
-                    <Field label="Email" name="email" type="email" required />
-                    <Field label="Phone" name="phone" type="tel" />
+                    <Field label="Email" name="email" type="email" required value={form.email} onChange={handleChange} />
+                    <Field label="Phone" name="phone" type="tel" value={form.phone} onChange={handleChange} />
                   </div>
                   <div>
                     <label className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">
                       Area of interest
                     </label>
-                    <select className="w-full glass rounded-xl px-4 py-3 bg-background/40 outline-none focus:border-primary transition">
+                    <select name="interest" value={form.interest} onChange={handleChange} className="w-full glass rounded-xl px-4 py-3 bg-background/40 outline-none focus:border-primary transition">
                       <option className="bg-background">Finance & Technology</option>
                       <option className="bg-background">Resources & Infrastructure</option>
                       <option className="bg-background">Trade, Retail & Logistics</option>
@@ -75,8 +101,11 @@ function ContactPage() {
                       Tell us about your project
                     </label>
                     <textarea
+                      name="message"
                       rows={5}
                       required
+                      value={form.message}
+                      onChange={handleChange}
                       className="w-full glass rounded-xl px-4 py-3 bg-background/40 outline-none focus:border-primary transition resize-none"
                       placeholder="A few sentences about what you're trying to build, fix or scale..."
                     />
@@ -114,7 +143,7 @@ function ContactPage() {
   );
 }
 
-function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {
+function Field({ label, name, type = "text", required, value, onChange }: { label: string; name: string; type?: string; required?: boolean; value?: string; onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }) {
   return (
     <div>
       <label htmlFor={name} className="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">
@@ -125,6 +154,8 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
         name={name}
         type={type}
         required={required}
+        value={value}
+        onChange={onChange}
         className="w-full glass rounded-xl px-4 py-3 bg-background/40 outline-none focus:border-primary transition"
       />
     </div>
