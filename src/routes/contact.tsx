@@ -4,9 +4,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — iLink Tanzania" },
-      { name: "description", content: "Reach iLink Tanzania in Dar es Salaam. Call +255 765 658 595 or email info@ilinkbiz.com to start a partnership." },
-      { property: "og:title", content: "Contact iLink Tanzania" },
+      { title: "Contact — i Link Tanzania" },
+      { name: "description", content: "Reach i Link Tanzania in Dar es Salaam. Call +255 765 658 595 or email info@ilinkbiz.com to start a partnership." },
+      { property: "og:title", content: "Contact i Link Tanzania" },
       { property: "og:description", content: "Start a conversation. We are potential." },
     ],
   }),
@@ -33,7 +33,7 @@ function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = [
-      `*New Inquiry from iLink Website*`,
+      `*New Inquiry from i Link Website*`,
       ``,
       `*Name:* ${form.name}`,
       `*Company:* ${form.company || "N/A"}`,

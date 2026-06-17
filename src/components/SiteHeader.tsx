@@ -39,7 +39,7 @@ export function SiteHeader() {
               <div className="absolute inset-0 rounded-xl bg-primary/30 blur-lg group-hover:blur-xl transition-all" />
               <img
                 src={logoAsset.url}
-                alt="iLink Tanzania"
+                alt="i Link Tanzania"
                 className="relative h-10 w-auto rounded-xl object-contain"
               />
             </div>
