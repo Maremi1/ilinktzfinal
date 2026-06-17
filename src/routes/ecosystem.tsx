@@ -4,6 +4,16 @@ import pillarFinance from "@/assets/pillar-finance.jpg";
 import pillarResources from "@/assets/pillar-resources.jpg";
 import pillarTrade from "@/assets/pillar-trade.jpg";
 import pillarLifestyle from "@/assets/pillar-lifestyle.jpg";
+import itankLogo from "@/assets/brands/itank.png.asset.json";
+import ifinanceLogo from "@/assets/brands/ifinance.png.asset.json";
+import imineLogo from "@/assets/brands/imine.png.asset.json";
+import idetectLogo from "@/assets/brands/idetect.png.asset.json";
+import igrowLogo from "@/assets/brands/igrow.png.asset.json";
+import almaLogo from "@/assets/brands/alma-beauty.png.asset.json";
+import mamamiasLogo from "@/assets/brands/mamamias.png.asset.json";
+import isupplyLogo from "@/assets/brands/isupply.png.asset.json";
+import myestateLogo from "@/assets/brands/myestate.png.asset.json";
+import icleanLogo from "@/assets/brands/iclean.png.asset.json";
 
 export const Route = createFileRoute("/ecosystem")({
   head: () => ({
@@ -17,7 +27,7 @@ export const Route = createFileRoute("/ecosystem")({
   component: EcosystemPage,
 });
 
-type Brand = { name: string; tag: string };
+type Brand = { name: string; tag: string; logo?: string };
 type Pillar = { id: string; title: string; subtitle: string; accent: string; image: string; brands: Brand[] };
 
 const pillars: Pillar[] = [
@@ -29,9 +39,9 @@ const pillars: Pillar[] = [
     image: pillarFinance,
     brands: [
       { name: "iBank", tag: "Banking & Forex Bureau — smart cards, biometric devices, mobile money, SMS gateways." },
-      { name: "iFinance", tag: "Microfinance systems for small groups, biometric field tools and managed investment funds." },
+      { name: "iFinance", tag: "Microfinance systems for small groups, biometric field tools and managed investment funds.", logo: ifinanceLogo.url },
       { name: "iLink Telecom", tag: "Premier IT consultation, comprehensive ISP solutions and telecommunications infrastructure." },
-      { name: "iTank", tag: "Targeted database collection — demographic intelligence powering specialized campaigns." },
+      { name: "iTank", tag: "Targeted database collection — demographic intelligence powering specialized campaigns.", logo: itankLogo.url },
     ],
   },
   {
@@ -41,10 +51,10 @@ const pillars: Pillar[] = [
     accent: "from-accent/40 to-secondary/40",
     image: pillarResources,
     brands: [
-      { name: "iMine", tag: "End-to-end mineral activities — gemstone cutting, domestic sales, certified international marketing." },
-      { name: "iGrow", tag: "Agriculture & horticulture — production, processing, domestic and international marketing." },
-      { name: "iSupply", tag: "Reliable supply networks for power, energy, gas and commercial fuel requirements." },
-      { name: "iDetect", tag: "Industrial petroleum services — calibration, inspection, fuel-level detector setups." },
+      { name: "iMine", tag: "End-to-end mineral activities — gemstone cutting, domestic sales, certified international marketing.", logo: imineLogo.url },
+      { name: "iGrow", tag: "Agriculture & horticulture — production, processing, domestic and international marketing.", logo: igrowLogo.url },
+      { name: "iSupply", tag: "Reliable supply networks for power, energy, gas and commercial fuel requirements.", logo: isupplyLogo.url },
+      { name: "iDetect", tag: "Industrial petroleum services — calibration, inspection, fuel-level detector setups.", logo: idetectLogo.url },
     ],
   },
   {
@@ -54,8 +64,8 @@ const pillars: Pillar[] = [
     accent: "from-secondary/40 to-primary/40",
     image: pillarTrade,
     brands: [
-      { name: "Alma Beauty", tag: "Cosmetics, Alma clothing line, interior décor and reproductive health products." },
-      { name: "Mama Mia's Soko", tag: "E-commerce hub — manufacturer-to-consumer with tiered membership and physical stores." },
+      { name: "Alma Beauty", tag: "Cosmetics, Alma clothing line, interior décor and reproductive health products.", logo: almaLogo.url },
+      { name: "Mama Mia's Soko", tag: "E-commerce hub — manufacturer-to-consumer with tiered membership and physical stores.", logo: mamamiasLogo.url },
       { name: "Dunamis", tag: "Coordinated rapid pickup and delivery network with specialized riders." },
       { name: "Rehoboth", tag: "Online consultation marketplace — voice and video sessions with experts across fields." },
     ],
@@ -68,9 +78,9 @@ const pillars: Pillar[] = [
     image: pillarLifestyle,
     brands: [
       { name: "AtomicStar", tag: "PR, HR, employment agency, project management, feasibility studies and iLink media." },
-      { name: "myEstate", tag: "Real estate development, property agency, interior design and finance portfolios." },
+      { name: "myEstate", tag: "Real estate development, property agency, interior design and finance portfolios.", logo: myestateLogo.url },
       { name: "myHeritage", tag: "Tourism ecosystem — museums, hotels, recreation and land/water/air transport." },
-      { name: "iClean", tag: "Trusted facility management — cleaning, laundry, grocery, pet care, relocation." },
+      { name: "iClean", tag: "Trusted facility management — cleaning, laundry, grocery, pet care, relocation.", logo: icleanLogo.url },
     ],
   },
 ];
