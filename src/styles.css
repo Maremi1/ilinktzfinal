@@ -39,7 +39,7 @@
 :root {
   --radius: 1rem;
 
-  /* LIGHT THEME — soft sky white with iLink blue accents */
+  /* LIGHT THEME — soft sky white with i Link blue accents */
   --background: oklch(0.98 0.01 240);
   --foreground: oklch(0.18 0.05 260);
 

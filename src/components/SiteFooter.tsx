@@ -9,7 +9,7 @@ export function SiteFooter() {
           <div className="grid md:grid-cols-4 gap-10">
             <div className="md:col-span-2">
               <Link to="/" className="flex items-center gap-3">
-                <img src={logoAsset.url} alt="iLink" className="h-12 w-auto rounded-xl object-contain" />
+                <img src={logoAsset.url} alt="i Link" className="h-12 w-auto rounded-xl object-contain" />
               </Link>
               <p className="mt-6 text-muted-foreground max-w-md leading-relaxed">
                 A multi-sector conglomerate engineering bespoke ICT and marketing
@@ -43,7 +43,7 @@ export function SiteFooter() {
           </div>
 
           <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-            <div>© {new Date().getFullYear()} iLink Tanzania. All rights reserved.</div>
+            <div>© {new Date().getFullYear()} i Link Tanzania. All rights reserved.</div>
             <div>Local execution, global standards.</div>
           </div>
         </div>

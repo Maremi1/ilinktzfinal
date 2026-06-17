@@ -10,7 +10,7 @@ import { BrandMarquee } from "@/components/BrandMarquee";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "iLink Tanzania — Bridging Ideas with Reality" },
+      { title: "i Link Tanzania — Bridging Ideas with Reality" },
       { name: "description", content: "Engineering bespoke ICT and marketing solutions across 16 specialized brands and four operational pillars in Tanzania." },
     ],
   }),
@@ -52,7 +52,7 @@ function Index() {
               with reality.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              iLink Tanzania engineers bespoke ICT and marketing solutions —
+              i Link Tanzania engineers bespoke ICT and marketing solutions —
               linking businesses, communities and customers across sixteen
               specialized brands.
             </p>
@@ -217,9 +217,9 @@ function Index() {
 
             <div className="space-y-4">
               {[
-                { name: "iLink Global Holdings", role: "The IP Engine", body: "Acquires, licenses and manages proprietary methodologies, software, AI systems and trademarked brands globally." },
-                { name: "iLink International", role: "Regional Coordination", body: "Structures cross-border investments, financial oversight and regional joint ventures." },
-                { name: "iLink Tanzania", role: "Ground Operations", body: "Adapts licensed global systems to the Tanzanian market with direct client delivery and local service management." },
+                { name: "i Link Global Holdings", role: "The IP Engine", body: "Acquires, licenses and manages proprietary methodologies, software, AI systems and trademarked brands globally." },
+                { name: "i Link International", role: "Regional Coordination", body: "Structures cross-border investments, financial oversight and regional joint ventures." },
+                { name: "i Link Tanzania", role: "Ground Operations", body: "Adapts licensed global systems to the Tanzanian market with direct client delivery and local service management." },
               ].map((e, i) => (
                 <div key={e.name} className="glass-card rounded-2xl p-6 flex gap-5">
                   <div className="font-display text-3xl font-bold text-gradient w-10">0{i + 1}</div>
@@ -243,7 +243,7 @@ function Index() {
               <div className="relative overflow-hidden rounded-2xl">
                 <img
                   src={teamMeeting}
-                  alt="The iLink Tanzania team collaborating"
+                  alt="The i Link Tanzania team collaborating"
                   className="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700"
                   width={1600}
                   height={1200}
@@ -266,7 +266,7 @@ function Index() {
                 A team built for <span className="text-gradient">excellence</span>.
               </h2>
               <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
-                Every iLink employee is selected, trained and supported to deliver
+                Every i Link employee is selected, trained and supported to deliver
                 with discipline. We believe people are the bridge between strategy
                 and result.
               </p>

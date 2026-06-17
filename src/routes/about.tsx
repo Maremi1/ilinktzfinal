@@ -10,9 +10,9 @@ import aboutCollab from "@/assets/about-collab.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — iLink Tanzania" },
-      { name: "description", content: "Learn about iLink Tanzania — our vision, mission, governance and the values that drive our multi-sector ecosystem." },
-      { property: "og:title", content: "About iLink Tanzania" },
+      { title: "About — i Link Tanzania" },
+      { name: "description", content: "Learn about i Link Tanzania — our vision, mission, governance and the values that drive our multi-sector ecosystem." },
+      { property: "og:title", content: "About i Link Tanzania" },
       { property: "og:description", content: "A trusted, sought-after business partner — bridging ideas with reality through ICT and marketing solutions." },
     ],
   }),
@@ -28,12 +28,12 @@ function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
         </div>
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">About iLink</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">About i Link</div>
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight">
             A conglomerate built to <span className="text-gradient">link possibility</span>.
           </h1>
           <p className="mt-6 text-xl text-muted-foreground leading-relaxed max-w-3xl">
-            iLink Tanzania identifies community problems and delivers customized,
+            i Link Tanzania identifies community problems and delivers customized,
             value-added technological services and devices that integrate
             seamlessly into existing workflows.
           </p>
@@ -116,7 +116,7 @@ function AboutPage() {
               <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Standard</div>
               <h2 className="font-display text-3xl font-bold mb-4">Sixteen brands. One discipline.</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Across finance, infrastructure, trade and lifestyle, every iLink
+                Across finance, infrastructure, trade and lifestyle, every i Link
                 brand operates by a single standard of excellence — disciplined
                 execution, rapid response and uncompromising confidentiality.
               </p>
@@ -156,8 +156,8 @@ function AboutPage() {
           <div className="glass-strong rounded-3xl p-10">
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { tier: "Holdings", role: "Strategic IP & Brand Ownership", node: "iLink Global Holdings Co. Ltd." },
-                { tier: "International", role: "Cross-border Coordination", node: "iLink International Ltd." },
+                { tier: "Holdings", role: "Strategic IP & Brand Ownership", node: "i Link Global Holdings Co. Ltd." },
+                { tier: "International", role: "Cross-border Coordination", node: "i Link International Ltd." },
                 { tier: "Tanzania", role: "Ground Execution", node: "Managing Director — Dorice Emmanuel Malle" },
               ].map((g) => (
                 <div key={g.tier} className="glass rounded-2xl p-6 relative">

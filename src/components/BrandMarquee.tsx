@@ -16,7 +16,7 @@ type Item = { name: string; logo?: string };
 const items: Item[] = [
   { name: "iBank", logo: ibank.url },
   { name: "iFinance", logo: ifinance.url },
-  { name: "iLink Telecom" },
+  { name: "i Link Telecom" },
   { name: "iTank", logo: itank.url },
   { name: "iMine", logo: imine.url },
   { name: "iGrow", logo: igrow.url },

@@ -20,9 +20,9 @@ import atomicstarLogo from "@/assets/brands/atomicstar.png.asset.json";
 export const Route = createFileRoute("/ecosystem")({
   head: () => ({
     meta: [
-      { title: "Ecosystem — iLink Tanzania" },
+      { title: "Ecosystem — i Link Tanzania" },
       { name: "description", content: "Sixteen specialized brands organized into four operational pillars: Finance & Tech, Resources & Infrastructure, Trade & Logistics, and Professional Services & Lifestyle." },
-      { property: "og:title", content: "The iLink Ecosystem" },
+      { property: "og:title", content: "The i Link Ecosystem" },
       { property: "og:description", content: "Explore 16 brands across 4 pillars driving Tanzania's multi-sector innovation." },
     ],
   }),
@@ -42,7 +42,7 @@ const pillars: Pillar[] = [
     brands: [
       { name: "iBank", tag: "Banking & Forex Bureau — smart cards, biometric devices, mobile money, SMS gateways.", logo: ibankLogo.url },
       { name: "iFinance", tag: "Microfinance systems for small groups, biometric field tools and managed investment funds.", logo: ifinanceLogo.url },
-      { name: "iLink Telecom", tag: "Premier IT consultation, comprehensive ISP solutions and telecommunications infrastructure." },
+      { name: "i Link Telecom", tag: "Premier IT consultation, comprehensive ISP solutions and telecommunications infrastructure." },
       { name: "iTank", tag: "Targeted database collection — demographic intelligence powering specialized campaigns.", logo: itankLogo.url },
     ],
   },
@@ -79,7 +79,7 @@ const pillars: Pillar[] = [
     accent: "from-primary/30 to-secondary/30",
     image: pillarLifestyle,
     brands: [
-      { name: "AtomicStar", tag: "PR, HR, employment agency, project management, feasibility studies and iLink media.", logo: atomicstarLogo.url },
+      { name: "AtomicStar", tag: "PR, HR, employment agency, project management, feasibility studies and i Link media.", logo: atomicstarLogo.url },
       { name: "myEstate", tag: "Real estate development, property agency, interior design and finance portfolios.", logo: myestateLogo.url },
       { name: "myHeritage", tag: "Tourism ecosystem — museums, hotels, recreation and land/water/air transport." },
       { name: "iClean", tag: "Trusted facility management — cleaning, laundry, grocery, pet care, relocation.", logo: icleanLogo.url },

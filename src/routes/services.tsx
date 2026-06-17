@@ -13,9 +13,9 @@ import svcConsultation from "@/assets/svc-consultation.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — iLink Tanzania" },
+      { title: "Services — i Link Tanzania" },
       { name: "description", content: "ICT consulting, financial systems, supply networks, e-commerce, delivery, real estate, tourism and consultation services delivered with operational excellence." },
-      { property: "og:title", content: "Services — iLink Tanzania" },
+      { property: "og:title", content: "Services — i Link Tanzania" },
       { property: "og:description", content: "End-to-end solutions across technology, finance, infrastructure, trade and lifestyle." },
     ],
   }),
