@@ -15,6 +15,9 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About i Link Tanzania" },
       { property: "og:description", content: "A trusted, sought-after business partner — bridging ideas with reality through ICT and marketing solutions." },
     ],
+    links: [
+      { rel: "canonical", href: "https://tanzania.ilinkbiz.com/about" },
+    ],
   }),
   component: AboutPage,
 });
@@ -28,7 +31,7 @@ function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
         </div>
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">About i Link</div>
+          <div className="text-sm tracking-[0.2em] text-primary mb-4 font-semibold">About i Link</div>
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight">
             A conglomerate built to <span className="text-gradient">link possibility</span>.
           </h1>
@@ -63,7 +66,7 @@ function AboutPage() {
                 height={1024}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="text-xs uppercase tracking-[0.2em] text-primary">Engineered</div>
                 <div className="font-display font-bold text-lg">Bespoke systems</div>
@@ -86,7 +89,7 @@ function AboutPage() {
                 height={768}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+              <div className="absolute inset-0 bg-transparent" />
             </div>
             <div className="p-10 -mt-8 relative">
               <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Promise</div>
@@ -110,7 +113,7 @@ function AboutPage() {
                 height={768}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+              <div className="absolute inset-0 bg-transparent" />
             </div>
             <div className="p-10 -mt-8 relative">
               <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">The Standard</div>
@@ -138,7 +141,7 @@ function AboutPage() {
                 height={768}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-background/10 to-transparent" />
               <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 max-w-lg">
                 <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2">Governance</div>
                 <h2 className="font-display text-3xl md:text-4xl font-bold">Streamlined for an agile conglomerate</h2>
@@ -186,7 +189,7 @@ function AboutPage() {
                   height={1024}
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="text-xs uppercase tracking-[0.2em] text-primary mb-1">Our Reach</div>
                   <div className="font-display font-bold text-xl">Serving every tier of the economy</div>
@@ -206,6 +209,34 @@ function AboutPage() {
                   <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{t.body}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Profile Download */}
+      <section className="py-16 pb-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto rounded-3xl glass-card overflow-hidden p-8 md:p-12 relative flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+            
+            <div className="relative z-10 flex-1">
+              <div className="text-xs uppercase tracking-[0.25em] text-primary mb-3">Learn More</div>
+              <h2 className="font-display text-3xl font-bold mb-4">i Link Company Profile</h2>
+              <p className="text-muted-foreground leading-relaxed max-w-xl">
+                Discover our full ecosystem, complete service catalog, and detailed governance structure. Download our comprehensive company profile to see how i Link can bridge your business to customized solutions.
+              </p>
+            </div>
+            
+            <div className="relative z-10 shrink-0 w-full md:w-auto">
+              <a 
+                href="/I_Link_Tanzania_Corporate_Profile.pdf" 
+                download 
+                className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold hover:shadow-[var(--shadow-glow)] transition-all duration-300 hover:scale-105"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                Download Profile
+              </a>
             </div>
           </div>
         </div>

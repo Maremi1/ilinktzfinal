@@ -25,6 +25,9 @@ export const Route = createFileRoute("/ecosystem")({
       { property: "og:title", content: "The i Link Ecosystem" },
       { property: "og:description", content: "Explore 16 brands across 4 pillars driving Tanzania's multi-sector innovation." },
     ],
+    links: [
+      { rel: "canonical", href: "https://tanzania.ilinkbiz.com/ecosystem" },
+    ],
   }),
   component: EcosystemPage,
 });
@@ -138,7 +141,7 @@ function EcosystemPage() {
                 height={1024}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-background/10 to-transparent" />
               <div className="absolute left-8 bottom-8 right-8 max-w-md">
                 <div className="text-xs uppercase tracking-[0.25em] text-primary mb-2">{current.subtitle}</div>
                 <h3 className="font-display text-3xl md:text-4xl font-bold">{current.title}</h3>

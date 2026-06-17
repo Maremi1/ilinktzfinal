@@ -18,6 +18,9 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Services — i Link Tanzania" },
       { property: "og:description", content: "End-to-end solutions across technology, finance, infrastructure, trade and lifestyle." },
     ],
+    links: [
+      { rel: "canonical", href: "https://tanzania.ilinkbiz.com/services" },
+    ],
   }),
   component: ServicesPage,
 });
@@ -92,7 +95,7 @@ function ServicesPage() {
                     height={768}
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
                   <div className="absolute top-4 left-4 w-11 h-11 rounded-xl glass-strong flex items-center justify-center text-xl text-primary group-hover:scale-110 group-hover:rotate-6 transition-transform">
                     {s.icon}
                   </div>

@@ -12,6 +12,11 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "i Link Tanzania — Bridging Ideas with Reality" },
       { name: "description", content: "Engineering bespoke ICT and marketing solutions across 16 specialized brands and four operational pillars in Tanzania." },
+      { property: "og:title", content: "i Link Tanzania — Bridging Ideas with Reality" },
+      { property: "og:description", content: "Engineering bespoke ICT and marketing solutions across 16 specialized brands and four operational pillars in Tanzania." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://tanzania.ilinkbiz.com/" },
     ],
   }),
   component: Index,
@@ -43,10 +48,7 @@ function Index() {
 
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-up">
-            <div className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-primary mb-6">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Tanzania · Est. Conglomerate
-            </div>
+
             <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight">
               Bridging <span className="text-gradient">ideas</span><br />
               with reality.
@@ -249,7 +251,7 @@ function Index() {
                   height={1200}
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
               </div>
               <div className="absolute bottom-6 left-6 right-6 glass-strong rounded-2xl p-4 flex items-center justify-between">
                 <div>

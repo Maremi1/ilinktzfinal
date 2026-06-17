@@ -9,6 +9,9 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact i Link Tanzania" },
       { property: "og:description", content: "Start a conversation. We are potential." },
     ],
+    links: [
+      { rel: "canonical", href: "https://tanzania.ilinkbiz.com/contact" },
+    ],
   }),
   component: ContactPage,
 });

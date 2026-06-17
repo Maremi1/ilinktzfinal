@@ -34,10 +34,11 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "i Link Tanzania" },
       { name: "twitter:description", content: "i Link Tanzania engineers bespoke ICT and marketing solutions across 16 brands and four operational pillars." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e9bbcc92-07ab-4be7-9527-cd2de171bdfc/id-preview-3229be9d--c4ede1f4-0543-49d4-812e-f477d16ca7c5.lovable.app-1777219702809.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e9bbcc92-07ab-4be7-9527-cd2de171bdfc/id-preview-3229be9d--c4ede1f4-0543-49d4-812e-f477d16ca7c5.lovable.app-1777219702809.png" },
+      { property: "og:image", content: "https://tanzania.ilinkbiz.com/og-image.jpeg" },
+      { name: "twitter:image", content: "https://tanzania.ilinkbiz.com/og-image.jpeg" },
     ],
     links: [
+      { rel: "canonical", href: "https://tanzania.ilinkbiz.com" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -51,12 +52,22 @@ export const Route = createRootRoute({
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}if(t==='dark'){document.documentElement.classList.add('dark');}document.documentElement.style.colorScheme=t;}catch(e){document.documentElement.classList.add('dark');}})();`;
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "i Link Tanzania",
+  "url": "https://tanzania.ilinkbiz.com",
+  "logo": "https://tanzania.ilinkbiz.com/og-image.jpeg",
+  "description": "i Link Tanzania engineers bespoke ICT and marketing solutions across 16 brands and four operational pillars."
+};
+
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
       <head>
         <HeadContent />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
         {children}
