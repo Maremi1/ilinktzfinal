@@ -154,9 +154,15 @@ function EcosystemPage() {
                 <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full bg-gradient-to-br ${current.accent} blur-3xl opacity-50`} />
                 <div className="relative">
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-display font-bold text-sm">
-                      {b.name.replace(/[^A-Z]/g, "").slice(0, 2) || b.name[0]}
-                    </div>
+                    {b.logo ? (
+                      <div className="w-14 h-14 rounded-xl bg-white/95 flex items-center justify-center p-1.5 shrink-0">
+                        <img src={b.logo} alt={`${b.name} logo`} className="max-w-full max-h-full object-contain" loading="lazy" />
+                      </div>
+                    ) : (
+                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-display font-bold text-sm">
+                        {b.name.replace(/[^A-Z]/g, "").slice(0, 2) || b.name[0]}
+                      </div>
+                    )}
                     <h3 className="font-display text-2xl font-bold">{b.name}</h3>
                   </div>
                   <p className="mt-4 text-muted-foreground leading-relaxed">{b.tag}</p>
