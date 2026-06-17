@@ -8,11 +8,13 @@ import mamamias from "@/assets/brands/mamamias.png.asset.json";
 import isupply from "@/assets/brands/isupply.png.asset.json";
 import myestate from "@/assets/brands/myestate.png.asset.json";
 import iclean from "@/assets/brands/iclean.png.asset.json";
+import ibank from "@/assets/brands/ibank.png.asset.json";
+import atomicstar from "@/assets/brands/atomicstar.png.asset.json";
 
 type Item = { name: string; logo?: string };
 
 const items: Item[] = [
-  { name: "iBank" },
+  { name: "iBank", logo: ibank.url },
   { name: "iFinance", logo: ifinance.url },
   { name: "iLink Telecom" },
   { name: "iTank", logo: itank.url },
@@ -24,7 +26,7 @@ const items: Item[] = [
   { name: "Mama Mia's Soko", logo: mamamias.url },
   { name: "Dunamis" },
   { name: "Rehoboth" },
-  { name: "AtomicStar" },
+  { name: "AtomicStar", logo: atomicstar.url },
   { name: "myEstate", logo: myestate.url },
   { name: "myHeritage" },
   { name: "iClean", logo: iclean.url },
