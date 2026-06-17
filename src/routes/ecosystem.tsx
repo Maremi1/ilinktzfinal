@@ -14,6 +14,8 @@ import mamamiasLogo from "@/assets/brands/mamamias.png.asset.json";
 import isupplyLogo from "@/assets/brands/isupply.png.asset.json";
 import myestateLogo from "@/assets/brands/myestate.png.asset.json";
 import icleanLogo from "@/assets/brands/iclean.png.asset.json";
+import ibankLogo from "@/assets/brands/ibank.png.asset.json";
+import atomicstarLogo from "@/assets/brands/atomicstar.png.asset.json";
 
 export const Route = createFileRoute("/ecosystem")({
   head: () => ({
@@ -38,7 +40,7 @@ const pillars: Pillar[] = [
     accent: "from-primary/40 to-accent/30",
     image: pillarFinance,
     brands: [
-      { name: "iBank", tag: "Banking & Forex Bureau — smart cards, biometric devices, mobile money, SMS gateways." },
+      { name: "iBank", tag: "Banking & Forex Bureau — smart cards, biometric devices, mobile money, SMS gateways.", logo: ibankLogo.url },
       { name: "iFinance", tag: "Microfinance systems for small groups, biometric field tools and managed investment funds.", logo: ifinanceLogo.url },
       { name: "iLink Telecom", tag: "Premier IT consultation, comprehensive ISP solutions and telecommunications infrastructure." },
       { name: "iTank", tag: "Targeted database collection — demographic intelligence powering specialized campaigns.", logo: itankLogo.url },
@@ -77,7 +79,7 @@ const pillars: Pillar[] = [
     accent: "from-primary/30 to-secondary/30",
     image: pillarLifestyle,
     brands: [
-      { name: "AtomicStar", tag: "PR, HR, employment agency, project management, feasibility studies and iLink media." },
+      { name: "AtomicStar", tag: "PR, HR, employment agency, project management, feasibility studies and iLink media.", logo: atomicstarLogo.url },
       { name: "myEstate", tag: "Real estate development, property agency, interior design and finance portfolios.", logo: myestateLogo.url },
       { name: "myHeritage", tag: "Tourism ecosystem — museums, hotels, recreation and land/water/air transport." },
       { name: "iClean", tag: "Trusted facility management — cleaning, laundry, grocery, pet care, relocation.", logo: icleanLogo.url },
