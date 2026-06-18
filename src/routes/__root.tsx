@@ -38,6 +38,8 @@ export const Route = createRootRoute({
       { name: "twitter:image", content: "https://tanzania.ilinkbiz.com/og-image.jpeg" },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
       { rel: "canonical", href: "https://tanzania.ilinkbiz.com" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
